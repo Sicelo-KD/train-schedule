@@ -1,3 +1,5 @@
+import datetime
+
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.utils import timezone
@@ -11,5 +13,6 @@ def index(request):
     tnow = timezone.datetime.now(tz=tz)
     cdate = tnow.date()
     ctime = cdate.ctime()
+    datetimes = datetime.datetime
 
     return HttpResponse(f" {cdate} \n  {ctime} \n Hello!!, With Metrorail we will take you there Nomakanjani!!")
